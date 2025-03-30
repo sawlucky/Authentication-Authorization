@@ -3,6 +3,7 @@ const { generateToken } = require("../middlewares/jwtMiddleware");
 const { sendResetEmail } = require("../utils/sendMail");
 const crypto = require("crypto");
 const HandleSignup = async (req, res) => {
+    // console.log("yaha aaya")
     const { username, email, password } = req.body;
     const newUser = new User({
         username, email, password

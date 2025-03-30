@@ -41,7 +41,10 @@ const Signup = () => {
   } catch (error) {
     console.error("Error signing up:", error.response?.data || error.message);
   }
-  };
+    };
+    const HandleGoogleLogin = () => {
+        window.location.href="http://localhost:8080/auth/google"
+    }
 
   return (
     <div
@@ -104,7 +107,8 @@ const Signup = () => {
         <button
           
           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
-          aria-label="Login with Google"
+                  aria-label="Login with Google"
+                  onClick={HandleGoogleLogin}
         >
           Login with google
         </button>

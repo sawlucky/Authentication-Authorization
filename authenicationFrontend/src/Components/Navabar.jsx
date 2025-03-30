@@ -15,7 +15,7 @@ const Navbar = () => {
       .catch(() => {
         setUserData(null);
       });
-  }, [navigate]);
+  }, []);
     const HandleLogout = async() => {
        try {
          await axios.post(
